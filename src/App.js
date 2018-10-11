@@ -1,8 +1,6 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
 import './App.css';
-import { Grid, Navbar, Jumbotron, Button } from 'react-bootstrap';
-import { BrowserRouter as Router, Route, Link, Switch, Redirect } from "react-router-dom";
+import {Route, Link, Switch, Redirect } from "react-router-dom";
 
 
 import Home from './components/home';
