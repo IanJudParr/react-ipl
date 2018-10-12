@@ -16,6 +16,8 @@ class App extends Component {
   constructor(props, context) {
     super(props, context);
 
+    var self = this;
+
     this.data = require('./data/data.json');
 
     this.pages = [];
@@ -29,13 +31,18 @@ class App extends Component {
         page.layout.withFooter = true;
       }
 
+      if(page.items)
+      {
+        page.layout.hasItemListing = true;
+      }
+
       return page;
     };
 
     this.data.content.pages.forEach(page => {
       page = this.formatPage(page);
 
-      this.pages.push(<li> <Link to={`/${page.title}`} key={page.id} >{page.title}</Link> </li>);
+      self.pages.push(<li> <Link to={`/${page.title}`} key={page.id} >{page.title}</Link> </li>);
     });
 
     this.getPageData = function (data, props) {
@@ -47,7 +54,7 @@ class App extends Component {
   render() {
 
     return (
-      <div className="App">
+      <div className="App" class="container">
 
         <nav class="navbar navbar-default">
           <div class="container-fluid">

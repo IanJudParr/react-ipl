@@ -8,23 +8,24 @@
             },
             {
                 "title": "Products",
-                "body":"Nunc vitae lacinia augue, sit amet tincidunt dolor. Ut non ipsum non metus molestie hendrerit pellentesque pellentesque nibh. Suspendisse pulvinar vitae urna sed tempor. Fusce eget leo scelerisque, condimentum turpis non, accumsan ligula. Vestibulum aliquam mi vitae purus varius gravida. Fusce elit ipsum, finibus at condimentum vel, imperdiet sit amet turpis. Duis condimentum arcu ac dui tincidunt dignissim.",
-                "type": "list"
-            }
-        ],
-        "lists": [
-            {
-                "id": 1,
-                "name": "Eco-Cup",
-                "price": "12.99",
-                "appearsOn": "Products"
-                
-            },
-            {
-                "id": 1,
-                "name": "Eco-Bag",
-                "price": "5.99",
-                "appearsOn": "Products"
+                "body": "Nunc vitae lacinia augue, sit amet tincidunt dolor. Ut non ipsum non metus molestie hendrerit pellentesque pellentesque nibh. Suspendisse pulvinar vitae urna sed tempor. Fusce eget leo scelerisque, condimentum turpis non, accumsan ligula. Vestibulum aliquam mi vitae purus varius gravida. Fusce elit ipsum, finibus at condimentum vel, imperdiet sit amet turpis. Duis condimentum arcu ac dui tincidunt dignissim.",
+                "type": "list",
+                "items": [
+                    {
+                        "id": 1,
+                        "name": "Eco-Cup",
+                        "price": "12.99",
+                        "description": "Nunc vitae lacinia augue, sit amet tincidunt dolor. Ut non ipsum non metus molestie hendrerit pellentesque pellentesque nibh. Suspendisse pulvinar vitae urna sed tempor. Fusce eget leo scelerisque, condimentum turpis non, accumsan ligula. Vestibulum aliquam mi vitae purus varius gravida. Fusce elit ipsum, finibus at condimentum vel, imperdiet sit amet turpis. Duis condimentum arcu ac dui tincidunt dignissim.",
+                        "appearsOn": "Products"
+                    },
+                    {
+                        "id": 2,
+                        "name": "Eco-Bag",
+                        "price": "5.99",
+                        "description": "Nunc vitae lacinia augue, sit amet tincidunt dolor. Ut non ipsum non metus molestie hendrerit pellentesque pellentesque nibh. Suspendisse pulvinar vitae urna sed tempor. Fusce eget leo scelerisque, condimentum turpis non, accumsan ligula. Vestibulum aliquam mi vitae purus varius gravida. Fusce elit ipsum, finibus at condimentum vel, imperdiet sit amet turpis. Duis condimentum arcu ac dui tincidunt dignissim.",
+                        "appearsOn": "Products"
+                    }
+                ]
             }
         ]
     },

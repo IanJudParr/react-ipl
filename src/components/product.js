@@ -1,8 +1,6 @@
 import React from 'react';
 import { Button, Modal, Popover, Tooltip, OverlayTrigger } from 'react-bootstrap';
 
-
-
 class Product extends React.Component {
   constructor(props, context) {
     super(props, context);
@@ -10,11 +8,7 @@ class Product extends React.Component {
     this.handleShow = this.handleShow.bind(this);
     this.handleClose = this.handleClose.bind(this);
 
-    this.title = this.getTitle(this.props.id);
-    this.description = this.getDescription(this.props.id);
-    this.price = this.getPrice(this.props.id);
-
-    this.state = {
+     this.state = {
       show: false
     };
   }
@@ -27,16 +21,8 @@ class Product extends React.Component {
     this.setState({ show: true });
   }
 
-  getTitle(id){
-    return "This is the title of product with Id: " + id;
-  }
-
-  getDescription(id){
-    return "This is the descriiption of product with Id: " + id;
-  }
-
-  getPrice(id){
-    return "£" + id;
+  getPrice(value){
+    return "£" + value;
   }
 
   render() {
@@ -49,10 +35,10 @@ class Product extends React.Component {
 
     return (
       <div>
-        <p>{this.title}</p>
+        <p>{this.props.itemData.name}</p>
 
         <Button bsStyle="primary" bsSize="large" onClick={this.handleShow}>
-          Launch demo modal {this.props.id}
+          {this.props.itemData.name}
         </Button>
 
         <Modal show={this.state.show} onHide={this.handleClose}>
@@ -60,12 +46,12 @@ class Product extends React.Component {
             <Modal.Title>{this.title}</Modal.Title>
           </Modal.Header>
           <Modal.Body>
-            <h4>{this.title}</h4>
+            <h4>{this.props.itemData.name}</h4>
             <p>
-              {this.description}
+              {this.props.itemData.description}
             </p>
             <p>
-              {this.price}
+              {this.getPrice(this.props.itemData.price)}
             </p>
 
             <h4>Popover in a modal</h4>
