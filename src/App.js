@@ -20,7 +20,8 @@ class App extends Component {
 
     this.data = require('./data/data.json');
 
-    this.pages = [];
+    this.navBarPages = [];
+    this.fluidPages = [];
     this.routes = [];
 
    
@@ -42,7 +43,8 @@ class App extends Component {
     this.data.content.pages.forEach(page => {
       page = this.formatPage(page);
 
-      self.pages.push(<li> <Link to={`/${page.title}`} key={page.id} >{page.title}</Link> </li>);
+      self.navBarPages.push(<li> <Link to={`/${page.title}`} key={page.id} >{page.title}</Link> </li>);
+      self.fluidPages.push(<span class="icon-bar"> <Link to={`/${page.title}`} key={page.id} >{page.title}</Link> </span>);
     });
 
     this.getPageData = function (data, props) {
@@ -59,17 +61,14 @@ class App extends Component {
         <nav class="navbar navbar-default">
           <div class="container-fluid">
             <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
-              <span class="sr-only">Toggle navigation</span>
-              <span class="icon-bar"></span>
-              <span class="icon-bar"></span>
-              <span class="icon-bar"></span>
+              {this.fluidPages}
             </button>
             <Link className="navbar-brand" to="/">{this.data.content.siteName}</Link>
           </div>
 
           <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <ul class="nav navbar-nav">
-              {this.pages}
+              {this.navBarPages}
             </ul>
           </div>
 
