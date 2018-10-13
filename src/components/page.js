@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 
 import Products from './products';
+import Contact from './contact';
 
 class Page extends Component {
  
@@ -12,6 +13,7 @@ class Page extends Component {
           <div class="panel-body">
             {this.props.data.body}
             {<Products data={this.props.data}/>}
+            {<Contact data={this.props.data}/>}
           </div>
         </div>
       </div>

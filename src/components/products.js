@@ -3,7 +3,7 @@ import React from 'react';
 import Product from './product';
 
 export default class Products extends React.Component {
-
+  
   showProducts = function(){
     var products = [];  
     if(!this.props.data.items) return products;

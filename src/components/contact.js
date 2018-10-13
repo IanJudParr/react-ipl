@@ -1,22 +1,18 @@
 import React from 'react';
+import ContactItem from './contactItem';
 
-import Product from './product';
+export default class Contact extends React.Component {
 
-export default class Products extends React.Component {
+  show = function(){
 
-  showProducts = function(){
-    var products = [];  
-    if(!this.props.data.items) return products;
-    this.props.data.items.forEach(element => {
-      products.push(<Product itemData={element}/>);          
-    });
-
-    return products;
+    return this.props.data.contact != null;
   };
 
   render(){
-    return <div>
-      {this.showProducts()}
+    return(
+      <div>        
+        { this.show() ? <ContactItem data={this.props.data.contact} /> : null }
     </div>
+    )
   }
 };
