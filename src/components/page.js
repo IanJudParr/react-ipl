@@ -3,21 +3,17 @@ import React, { Component } from 'react';
 import Product from './product';
 
 class Page extends Component {
-  constructor(props, context) {
-    super(props, context);
-    
-    var self = this;
+ 
+  
+  showProducts = function(){
+    var products = [];  
+    if(!this.props.data.items) return products;
+    this.props.data.items.forEach(element => {
+      products.push(<Product itemData={element}/>);          
+    });
 
-    this.showProducts = function(){
-      var products = [];  
-      props.data.items.forEach(element => {
-        products.push(<Product itemData={element}/>);          
-      });
-
-      return products;
-    };
+    return products;
   };
-
 
   render() {
     return (

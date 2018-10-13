@@ -20,11 +20,12 @@ class App extends Component {
 
     this.data = require('./data/data.json');
 
+    this.state = {data: this.data, currentPage:null};
+
     this.navBarPages = [];
     this.fluidPages = [];
     this.routes = [];
 
-   
     this.formatPage = function(page){
       page.layout = {};
 
