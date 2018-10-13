@@ -1,20 +1,9 @@
 import React, { Component } from 'react';
 
-import Product from './product';
+import Products from './products';
 
 class Page extends Component {
  
-  
-  showProducts = function(){
-    var products = [];  
-    if(!this.props.data.items) return products;
-    this.props.data.items.forEach(element => {
-      products.push(<Product itemData={element}/>);          
-    });
-
-    return products;
-  };
-
   render() {
     return (
       <div>
@@ -22,7 +11,7 @@ class Page extends Component {
           <div class="panel-heading">{this.props.data.title}</div>
           <div class="panel-body">
             {this.props.data.body}
-            {this.showProducts()}
+            {<Products data={this.props.data}/>}
           </div>
         </div>
       </div>
