@@ -54,3 +54,13 @@ ul {
   color: #fff;
   display: block;
 }
+
+.top-buffer { margin-top:20px; }
+
+.pull-right {
+  float: right !important;
+}
+
+.glyphicon {
+  font-size: 30px;
+}

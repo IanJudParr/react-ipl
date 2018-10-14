@@ -7,9 +7,8 @@
                 "body": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In iaculis magna eu lorem sodales, id volutpat dolor molestie. Quisque tellus velit, mollis eget metus in, congue consectetur nulla. Nam neque ipsum, feugiat et velit at, porttitor rutrum risus. Donec molestie fermentum rhoncus. Cras interdum lorem sit amet dui aliquet sollicitudin. Praesent in porttitor dui. Nulla egestas sapien nunc. In vitae lectus vel diam dictum consectetur. Curabitur in nibh turpis."
             },
             {
-                "title": "Contact",
-                "body": "Quisque tellus velit, mollis eget metus in, congue consectetur nulla. Nam neque ipsum, feugiat et velit at, porttitor rutrum risus. Donec molestie fermentum rhoncus. Cras interdum lorem sit amet dui aliquet sollicitudin. Praesent in porttitor dui. Nulla egestas sapien nunc. In vitae lectus vel diam dictum consectetur. Curabitur in nibh turpis.",
-                "contact": {"toEmailAddress": "ianjudparr@gmail.com"}
+                "title": "Contact",                
+                "contact": {"toEmailAddress": "ianjudparr@gmail.com", "map":{"center":{ "lat": 53.427800, "lng":-2.781657}, "zoom": 17, "text": ""}}
             },
             {
                 "title": "Products",
