@@ -62,5 +62,6 @@ ul {
 }
 
 .glyphicon {
-  font-size: 30px;
+  font-size: calc(10px + 2vmin);
+  color: red;
 }

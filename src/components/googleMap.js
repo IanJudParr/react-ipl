@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import GoogleMapReact from 'google-map-react';
 
-const AnyReactComponent = ({ text }) => (
+const Marker = ({ text }) => (
     <div class="glyphicon glyphicon-map-marker" style={{ transform: 'translate(-50%, -50%)' }}>
         {text}
     </div>
@@ -18,7 +18,7 @@ class LocationMap extends Component {
                     defaultCenter={this.props.data.map.center}
                     defaultZoom={this.props.data.map.zoom}
                 >
-                    <AnyReactComponent
+                    <Marker
                         lat={this.props.data.map.center.lat}
                         lng={this.props.data.map.center.lng}
                         text={this.props.data.map.text}
