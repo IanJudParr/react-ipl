@@ -8,19 +8,20 @@ export default class ContactItem extends React.Component {
     return (
       <div>
         <div class="col-lg-6 form-group">
-
-          <div class="row">
-            <div class="input-group input-group-lg">
-              <span class="input-group-addon" id="basic-addon1">@</span>
-              <input type="text" class="form-control" placeholder="email address" />
+          <form name="contact" method="POST" netlify>
+            <div class="row">
+              <div class="input-group input-group-lg">
+                <span class="input-group-addon" id="basic-addon1">@</span>
+                <input type="text" class="form-control" placeholder="email address" />
+              </div>
             </div>
-          </div>
-          <div class="row top-buffer">
-            <textarea class="input-group input-group-lg form-control" rows="5" id="comment"></textarea>
-          </div>
-          <div class="row top-buffer">
-            <button type="button" class="btn btn-lg btn-success pull-right">Send</button>
-          </div>
+            <div class="row top-buffer">
+              <textarea class="input-group input-group-lg form-control" rows="5" id="comment"></textarea>
+            </div>
+            <div class="row top-buffer">
+              <button type="button" class="btn btn-lg btn-success pull-right"  type="submit">Send</button>
+            </div>
+          </form>
         </div>
         <div class="col-lg-6 form-group">
           <LocationMap data={this.props.data} />
