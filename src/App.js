@@ -9,6 +9,7 @@ import About from './components/about';
 import Products from './components/products';
 import NotFound from './components/notFound';
 import Page from './components/page';
+import './themes/clean/content/css/theme.css';
 
 var _ = require('underscore');
 
@@ -49,7 +50,15 @@ class App extends Component {
     });
 
     this.getPageData = function (data, props) {
-      return _.findWhere(data.content.pages, { title: props.match.params.page });
+      var page = _.findWhere(data.content.pages, { title: props.match.params.page });
+      if(page)
+        return page;
+
+      return {
+        "title": "Page Not Found",
+        "body": "Oops - the page you're looking for doesn't exist"
+    };
+
     };
     
   }
